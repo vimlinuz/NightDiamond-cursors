@@ -8,7 +8,7 @@ These themes were collected and mirrored from various public sources for ease of
 ## Attribution
 
 **I am _not_ the original creator of these cursor themes.**  
-If you are the original author and would like to be credited or have your work removed, please [open an issue](https://github.com/santoshxshrestha/NightDiamond-cursors/issues) or contact me.
+If you are the original author and would like to be credited or have your work removed, please [open an issue](https://github.com/vimlinuz/NightDiamond-cursors/issues) or contact me.
 
 If you have more information about the authorship or original license of a specific theme, please let me know so I can update this repository accordingly.
 
@@ -29,12 +29,11 @@ in
     gtk.enable = true;
     x11.enable = true;
     package = nightdiamondCursors;
-    name = "NightDiamond-Blue"; # Or NightDiamond-Red, or any theme in this repo
+    name = "NightDiamond-Blue"; # Or NightDiamond-Red, NightDiamond-Fusion
     size = 20;
   };
 }
 ```
-
 
 Alternatively, you can use a local derivation or overlay if you want more control or customization. For example, if you want to use a different version, patch the theme, or keep your cursor package outside of nixpkgs, you can do the following:
 
@@ -53,15 +52,12 @@ in
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
-    name = "NightDiamond-Red"; # Or NightDiamond-Blue, or any theme in this repo
+    name = "NightDiamond-Red"; # Or NightDiamond-Blue, NightDiamond-Fusion
     package = nightdiamondCursors;
     size = 20;
   };
 }
 ```
-
-
-
 
 ```nix
 # nightdiamond-cursors.nix
@@ -72,13 +68,13 @@ in
 }:
 stdenvNoCC.mkDerivation {
   pname = "NightDiamond-cursors";
-  version = "3ff3c0486430a4901b4d5cbbee87a370aa2b8ce9";
+  version = "e13db9e75f74e42a68e32c53d96b53334c7b92b1";
 
   src = fetchFromGitHub {
-    owner = "santoshxshrestha";
+    owner = "vimlinuz";
     repo = "NightDiamond-cursors";
-    rev = "3ff3c0486430a4901b4d5cbbee87a370aa2b8ce9";
-    hash = "sha256-huruHo5w7Qrte1+nIiz+P1xPNDGrv5/eByHwaSlZYwQ=";
+    rev = "e13db9e75f74e42a68e32c53d96b53334c7b92b1";
+    hash = "sha256-4cxQCN5MXGowRi/tzBPL/gTbPXpsMiSZSQr/vLFkcVQ=";
   };
 
   installPhase = ''
@@ -90,13 +86,12 @@ stdenvNoCC.mkDerivation {
 
   meta = with lib; {
     description = "NightDiamond custom cursor theme";
-    homepage = "https://github.com/santoshxshrestha/NightDiamond-cursors";
+    homepage = "https://github.com/vimlinuz/NightDiamond-cursors";
     license = licenses.gpl3Plus;
     platforms = platforms.linux;
   };
 }
 ```
-
 
 ## License
 
